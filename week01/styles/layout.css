@@ -1,0 +1,9 @@
+nav ul {
+  display: flex;
+  justify-content: space-between; /* or space-around, center, etc. */
+  list-style: none;
+}
+
+nav {
+  margin: 0 1rem;
+}
