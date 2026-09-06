@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* header comments */
+
+header {
+  background-color: #2c3e50;
+  padding: 1rem;
+  text-align: center;
+}
+
+header span {
+  display: block;
+  color: #fff;
+  font-family: "Merriweather", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* nav comments */
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+nav li {
+  display: block;
+}
+
+nav a {
+  display: block;
+  color: #eee;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* main comments */
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+/* card comments */
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+/* footer comment */
+
+footer {
+  background-color: #2c3e50;
+  color: #eee;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+/* about rules in these as comments */
+
+.about-content {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-content img {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.about-me hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 0 1.5rem;
+}
+
+.about-me h3 {
+  padding: 1rem 1.5rem 0;
+  font-family: "Merriweather", serif;
+  color: #2c3e50;
+}
+
+/* web-dev-resources this as comment */
+
+.web-dev-resources ul {
+  list-style: disc;
+  padding: 1.5rem 2rem;
+}
+
+.web-dev-resources li {
+  margin-bottom: 0.5rem;
+}
+
+.web-dev-resources a {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+/* flag info comment */
+
+.flag-info {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem 1.5rem;
+  align-items: flex-start;
+}
+
+.flag-info figure {
+  text-align: center;
+  margin: 0;
+}
+
+.flag-info img {
+  width: 100px;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.flag-info figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.flag-info p {
+  flex: 1;
+}
