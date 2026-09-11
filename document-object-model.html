@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Practice</title>
+</head>
+<body>
+    <article>Original article content.</article>
+
+    <script>
+        // 1. Select an element
+        const article = document.querySelector('article');
+
+        // 2. Change innerHTML
+        article.innerHTML = 'innerHTML supports <strong>HTML</strong> tags. The textContent property does not.';
+
+        // 3. Change inline CSS style
+        article.style.textAlign = 'right';
+
+        // 4. Change an attribute
+        article.setAttribute('class', 'active');
+
+        // 5. Alternative class manipulation with classList
+        article.classList.add('active');
+        article.classList.remove('old-class');
+        article.classList.toggle('highlight');
+        article.classList.contains('active');
+
+        // 6. Create a new element
+        const paragraph = document.createElement('p');
+
+        // 7. Append content/elements
+        article.appendChild(paragraph);
+        article.append(paragraph, 'Hello World Addition!');
+
+        // 8. Remove elements
+        article.removeChild(paragraph);
+        article.remove();
+    </script>
+</body>
+</html>
