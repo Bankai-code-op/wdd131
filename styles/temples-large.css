@@ -1,0 +1,53 @@
+@media only screen and (min-width: 780px) {
+    header {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    header span {
+        flex-shrink: 0;
+        font-size: 2rem;
+    }
+
+    nav {
+        position: static;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        background-color: transparent;
+        transition: none;
+        width: auto;
+        flex-basis: auto;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header span {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+}
