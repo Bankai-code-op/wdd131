@@ -9,10 +9,18 @@
     --font-body: 'Roboto', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--color-text);
     background-color: var(--color-light);
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -28,6 +36,7 @@ h1, h2 {
 
 main {
     display: grid;
+    flex: 1;
     grid-template-areas:
         "image"
         "data"
@@ -62,20 +71,6 @@ main {
     width: 1.2rem;
     height: 1.2rem;
     vertical-align: middle;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
 }
 
 footer {
