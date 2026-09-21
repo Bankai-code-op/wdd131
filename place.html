@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Takoradi is a city in Ghana.">
+    <meta name="author" content="Mike Chishala">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-larger.css">
+    <script src="scripts/place.js" defer></script>
+    <title>Takoradi - Ghana</title>
+</head>
+
+<body>
+    <header>
+        <h1>Takoradi - Ghana</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 780px)" srcset="images/place-large.webp">
+            <img src="images/place-small-2.webp" alt="A person waving the Ghanaian flag during a street celebration" width="800" height="600" class="place-image"> 
+        </picture>
+
+        <section class="data">
+            <h2>Data</h2>
+            <p><span>Capital:</span> <span>Accra</span></p>
+            <p><span>Population:</span> <span>34 million</span></p>
+            <p><span>Language:</span> <span>English (official)</span></p>
+            <p><span>Currency:</span> <span>Ghanaian Cedi</span></p>
+            <p><span>Region:</span> <span>West Africa</span></p>
+            <p><span>Flag:</span> <span>🇬🇭</span></p>
+        </section>
+
+        <section class="weather">
+            <h2>
+                Weather
+                <img src="icons/partly-cloudy-day.svg" alt="" class="weather-icon-mobile">
+            </h2>
+            <p><span>Condition:</span> <span>Partly Cloudy</span></p>
+            <p><span>Temperature:</span> <span>29°C</span></p>
+            <p><span>Humidity:</span> <span>78%</span></p>
+            <p><span>Wind:</span> <span>12 km/h</span></p>
+            <p><span>Wind Chill:</span> <span id="windChill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mike Chishala — Lusaka, Zambia - All rights Reserved</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
