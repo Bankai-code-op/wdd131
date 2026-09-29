@@ -115,11 +115,11 @@ function createTempleCard(temple) {
   img.setAttribute("width", "400");
   img.setAttribute("height", "250");
 
+  figure.appendChild(img);
   figure.appendChild(name);
   figure.appendChild(location);
   figure.appendChild(dedication);
   figure.appendChild(area);
-  figure.appendChild(img);
 
   return figure;
 }
