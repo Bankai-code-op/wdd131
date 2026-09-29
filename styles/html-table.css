@@ -1,0 +1,73 @@
+/* Table Layout and Base Styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fbf8f5;
+  color: #333333;
+  padding: 2rem 1rem;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.account-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: 1px solid #d4a373;
+}
+
+/* Caption Requirement */
+.account-table caption {
+  caption-side: top;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #582f0e;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Header Rows */
+.account-table thead th {
+  background-color: #7f4f24;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 1.05rem;
+  text-align: center;
+  border: 1px solid #582f0e;
+}
+
+.account-table thead th:first-child {
+  text-align: left;
+}
+
+/* Data Cells */
+.account-table tbody th,
+.account-table tbody td {
+  padding: 12px 16px;
+  border: 1px solid #e6ccb2;
+}
+
+.account-table tbody td {
+  text-align: center;
+}
+
+.account-table tbody th {
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Zebra Striping using nth-child (Assignment Requirement) */
+.account-table tbody tr:nth-child(even) {
+  background-color: #faedcd; /* Warm desert tone */
+}
+
+.account-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Interactive Row Hover */
+.account-table tbody tr:hover {
+  background-color: #e9edc9;
+}
