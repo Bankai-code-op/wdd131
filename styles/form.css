@@ -1,16 +1,17 @@
 
 :root {
     --clr-bg: #ffffff;
-    --clr-surface: #f7f7f8;
-    --clr-border: #d1d1d6;
-    --clr-border-focus: #2d5fd6;
-    --clr-primary: #2d5fd6;
-    --clr-text: #1a1a1a;
-    --clr-text-secondary: #444444;
-    --clr-text-muted: #555555;
-    --clr-star: #d4880f;
-    --clr-star-inactive: #888888;
-    --clr-success: #1a7a3a;
+    --clr-surface: #f8fafc;
+    --clr-border: #cbd5e1;
+    --clr-border-focus: #1e40af;
+    --clr-primary: #1e40af;
+    --clr-primary-hover: #1e3a8a;
+    --clr-text: #111827;
+    --clr-text-secondary: #374151;
+    --clr-text-muted: #4b5563;
+    --clr-star: #854d0e;
+    --clr-star-inactive: #4b5563;
+    --clr-success: #14532d;
     --radius: 6px;
 }
 
@@ -247,7 +248,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #244db3;
+    background-color: var(--clr-primary-hover);
 }
 
 input[type="submit"]:focus-visible {
@@ -321,7 +322,7 @@ input[type="submit"]:focus-visible {
 }
 
 .btn-back:hover {
-    background-color: #244db3;
+    background-color: var(--clr-primary-hover);
 }
 
 /*Footer */
