@@ -1,0 +1,358 @@
+
+:root {
+    --clr-bg: #ffffff;
+    --clr-surface: #f7f7f8;
+    --clr-border: #d1d1d6;
+    --clr-border-focus: #2d5fd6;
+    --clr-primary: #2d5fd6;
+    --clr-text: #1a1a1a;
+    --clr-text-secondary: #444444;
+    --clr-text-muted: #555555;
+    --clr-star: #d4880f;
+    --clr-star-inactive: #888888;
+    --clr-success: #1a7a3a;
+    --radius: 6px;
+}
+
+/*Reset*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Screen Reader Only*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/*Body*/
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header*/
+header {
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--clr-text);
+}
+
+header .subtitle {
+    color: var(--clr-text-secondary);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+/*Main*/
+main {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+/*Form*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/*Fieldset*/
+fieldset {
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    background: var(--clr-surface);
+}
+
+legend {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--clr-primary);
+    padding: 0 0.4rem;
+}
+
+legend .hint {
+    font-weight: 400;
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+}
+
+/*Form Groups*/
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group > label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--clr-text-secondary);
+}
+
+.form-group > label .hint {
+    font-weight: 400;
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+}
+
+/*Inputs & Select*/
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    color: var(--clr-text);
+    background: #ffffff;
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--clr-border-focus);
+    box-shadow: 0 0 0 2px rgba(45, 95, 214, 0.2);
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+    color: var(--clr-text-muted);
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/*Star Rating*/
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.2rem;
+    padding: 0.25rem 0;
+}
+
+.star-rating input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.star-rating label {
+    font-size: 1.8rem;
+    color: var(--clr-star-inactive);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color: var(--clr-star);
+}
+
+.star-rating input[type="radio"]:checked ~ label {
+    color: var(--clr-star);
+}
+
+.star-rating input[type="radio"]:focus + label {
+    outline: 2px solid var(--clr-border-focus);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/*Checkbox Group*/
+.checkbox-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--clr-primary);
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    font-size: 0.9rem;
+    color: var(--clr-text);
+    cursor: pointer;
+}
+
+/*Submit Button*/
+.form-actions {
+    margin-top: 0.5rem;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #244db3;
+}
+
+input[type="submit"]:focus-visible {
+    outline: 2px solid var(--clr-text);
+    outline-offset: 2px;
+}
+
+/*Confirmation Card (review.html)*/
+.confirmation-card {
+    text-align: center;
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border);
+    border-radius: var(--radius);
+    padding: 2.5rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.checkmark-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--clr-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+}
+
+.checkmark {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.confirmation-card h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--clr-text);
+}
+
+.confirmation-card p {
+    color: var(--clr-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.review-count {
+    margin-top: 1rem !important;
+    font-weight: 600;
+    color: var(--clr-success) !important;
+}
+
+.review-count span {
+    font-weight: 700;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.65rem 1.5rem;
+    font-family: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--clr-primary);
+    border-radius: var(--radius);
+    text-decoration: none;
+}
+
+.btn-back:hover {
+    background-color: #244db3;
+}
+
+/*Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--clr-border);
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+
+    .star-rating label {
+        font-size: 1.5rem;
+    }
+
+    .confirmation-card {
+        padding: 1.75rem 1rem;
+    }
+}
