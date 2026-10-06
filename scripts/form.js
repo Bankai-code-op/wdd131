@@ -6,7 +6,6 @@ const products = [
     { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
 ];
 
-// Populate product select options
 const productSelect = document.getElementById("productName");
 
 products.forEach(product => {
@@ -16,6 +15,5 @@ products.forEach(product => {
     productSelect.appendChild(option);
 });
 
-// Footer dates
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = "Last modified: " + document.lastModified;
