@@ -1,0 +1,466 @@
+:root {
+    --color-primary: #c1121f;
+    --color-dark: #1d3557;
+    --color-bg: #f1faee;
+    --color-light: #fdfdfd;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-bg);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+/* Header */
+header {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-light);
+}
+
+#menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+}
+
+nav {
+    position: static;
+    flex-basis: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background-color: var(--color-dark);
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    text-align: center;
+}
+
+nav.open {
+    max-height: 500px;
+    opacity: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+nav a {
+    display: block;
+    color: var(--color-light);
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-primary);
+}
+
+/* Main content */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.hero-text {
+    padding: 1rem 0;
+}
+
+.hero-text h1 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.intro {
+    margin-bottom: 2rem;
+}
+
+.intro h2 {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.intro p {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border-top: 3px solid var(--color-primary);
+    padding: 1rem;
+}
+
+footer a {
+    color: var(--color-light);
+}
+
+/* Current page link in the nav */
+nav a[aria-current="page"] {
+    border-bottom: 3px solid var(--color-primary);
+}
+
+/* Equipment page */
+.page-title {
+    color: var(--color-primary);
+    margin-bottom: 0.75rem;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0 0.5rem;
+}
+
+.filter-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    border: 2px solid var(--color-dark);
+    border-radius: 999px;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.result-count {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.info-card {
+    background-color: #fff;
+    border: 1px solid var(--color-dark);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.info-card h2 {
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.info-type {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-note {
+    margin-top: 0.5rem;
+}
+
+/* Process page */
+.progress-area {
+    margin: 1.5rem 0;
+}
+
+.progress-text {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+progress {
+    width: 100%;
+    height: 1rem;
+    accent-color: var(--color-primary);
+}
+
+.step-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    background-color: #fff;
+    border: 1px solid var(--color-dark);
+    border-left: 6px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.step.done {
+    background-color: #e4ecf4;
+}
+
+.step input {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.15rem;
+    accent-color: var(--color-primary);
+}
+
+.step label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.step.done label::after {
+    content: " ✓";
+}
+
+.step p {
+    margin-top: 0.25rem;
+}
+
+.reset-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-dark);
+    background-color: var(--color-light);
+    border: 2px solid var(--color-dark);
+    border-radius: 999px;
+    padding: 0.5rem 1.25rem;
+    cursor: pointer;
+}
+
+.tips {
+    margin-top: 2rem;
+}
+
+.tips h2 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.tips ul {
+    padding-left: 1.5rem;
+}
+
+.tips li {
+    margin-bottom: 0.5rem;
+}
+
+/* Contact page */
+.contact-form {
+    max-width: 600px;
+    margin-top: 1.5rem;
+}
+
+.field {
+    margin-bottom: 1.25rem;
+}
+
+.field label,
+.field legend {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field select,
+.field textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--color-dark);
+    background-color: #fff;
+    border: 2px solid var(--color-dark);
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible,
+.field input[type="radio"]:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+fieldset.field {
+    border: 2px solid var(--color-dark);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+}
+
+.choice {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+}
+
+.choice label {
+    display: inline;
+    font-weight: 400;
+    margin: 0;
+}
+
+.choice input {
+    accent-color: var(--color-primary);
+}
+
+.counter {
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+.counter.near-limit {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.submit-btn {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 999px;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+}
+
+.confirmation {
+    max-width: 600px;
+    margin-top: 1.5rem;
+    background-color: #fff;
+    border: 1px solid var(--color-dark);
+    border-left: 6px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.confirmation h2 {
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.confirmation dt {
+    font-weight: 600;
+    margin-top: 0.75rem;
+}
+
+.confirmation dd {
+    margin-left: 0;
+    overflow-wrap: anywhere;
+}
+
+.confirmation .reset-btn {
+    margin-top: 1rem;
+}
+
+/* Home page: where to start */
+.start h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid var(--color-dark);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card img {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0.75rem;
+}
+
+.card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.card p {
+    margin-bottom: 0.75rem;
+}
+
+.card a {
+    color: var(--color-primary);
+    font-weight: 600;
+}

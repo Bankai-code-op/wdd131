@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BeatCraft is an informational website about beat-making, covering tools, process, and the craft of music production.">
+    <meta name="author" content="Mike Chishala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/beatcraft.css">
+    <link rel="stylesheet" href="styles/beatcraft-large.css">
+    <script src="scripts/beatcraft.js" defer></script>
+    <title>BeatCraft — Home</title>
+</head>
+<body>
+
+    <header>
+        <span class="logo">BeatCraft</span>
+        <nav>
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="genres.html">Genres</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" type="button" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img
+                src="images/hero-1000.webp"
+                srcset="images/hero-600.webp 600w, images/hero-1000.webp 1000w, images/hero-1400.webp 1400w"
+                sizes="(min-width: 1032px) 560px, (min-width: 780px) 55vw, calc(100vw - 2rem)"
+                alt="A music producer working at a laptop in a dark home studio, with a MIDI keyboard and studio monitors around the desk"
+                width="1000" height="667" fetchpriority="high">
+            <div class="hero-text">
+                <h1>Welcome to BeatCraft</h1>
+                <p>Learn the tools, process, and craft behind making beats — from your first kick drum to a finished track.</p>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>What is Beat-Making?</h2>
+            <p>Beat-making is the process of composing instrumental music — typically built around drums, bass, melody, and samples — using software and hardware tools rather than a full live band. It's the foundation of genres like hip-hop, trap, Afrobeat, and amapiano, and it's more accessible today than ever, with many producers starting from nothing more than a laptop and free software.</p>
+            <p>BeatCraft exists to walk you through the essentials: the gear worth knowing about, the actual step-by-step process of building a beat, the genres you can start with, and how to get started without being overwhelmed.</p>
+        </section>
+
+        <section class="start">
+            <h2>Where to Start</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <img src="images/icon-equipment.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
+                    <h3>Equipment</h3>
+                    <p>See the software and gear most beginners look at first, and filter it by type.</p>
+                    <a href="equipment.html">Browse the equipment</a>
+                </article>
+                <article class="card">
+                    <img src="images/icon-process.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
+                    <h3>The Process</h3>
+                    <p>Follow seven steps from choosing a tempo to exporting your beat, and check them off as you go.</p>
+                    <a href="process.html">Follow the process</a>
+                </article>
+                <article class="card">
+                    <img src="images/icon-genres.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
+                    <h3>Genres</h3>
+                    <p>Learn what makes boom bap, trap, Afrobeats, and amapiano sound different, and how to start a beat in each.</p>
+                    <a href="genres.html">Explore the genres</a>
+                </article>
+                <article class="card">
+                    <img src="images/icon-contact.svg" alt="" width="96" height="96" loading="lazy" decoding="async">
+                    <h3>Contact</h3>
+                    <p>Ask a question or suggest a topic you would like the site to cover.</p>
+                    <a href="contact.html">Get in touch</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mike Chishala — BeatCraft</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Follow the seven steps of making a beat, from choosing a tempo to exporting the finished track, and check off each step as you go.">
+    <meta name="author" content="Mike Chishala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/beatcraft.css">
+    <link rel="stylesheet" href="styles/beatcraft-large.css">
+    <script src="scripts/beatcraft.js" defer></script>
+    <script src="scripts/process.js" defer></script>
+    <title>BeatCraft — The Process</title>
+</head>
+<body>
+
+    <header>
+        <span class="logo">BeatCraft</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="process.html" aria-current="page">Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" type="button" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <main>
+        <h1 class="page-title">The Beat-Making Process</h1>
+        <p>Every producer works a little differently, but most beats come together in the same seven steps. Work through them in order, and check each step off as you finish it. Your progress is saved in this browser, so you can leave and pick up where you stopped.</p>
+
+        <div class="progress-area">
+            <p id="progress-text" class="progress-text" aria-live="polite"></p>
+            <progress id="progress-bar" max="7" value="0" aria-label="Beat-making progress"></progress>
+        </div>
+
+        <ol id="step-list" class="step-list"></ol>
+        <noscript><p>This page needs JavaScript turned on to show the step checklist.</p></noscript>
+
+        <button id="reset-progress" class="reset-btn" type="button">Reset my progress</button>
+
+        <section class="tips">
+            <h2>Tips for Your First Beat</h2>
+            <ul>
+                <li>Aim to finish a simple beat rather than perfect one. Finishing teaches you more than polishing.</li>
+                <li>Listen to a song you like and compare your drums and bass to it as you work.</li>
+                <li>Take short breaks. Your ears tire, and a fresh listen often shows what to fix.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mike Chishala - BeatCraft - All Rights Reserved</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+</html>

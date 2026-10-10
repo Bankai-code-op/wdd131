@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    c
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the sound, origin, and typical tempo of boom bap, trap, Afrobeats, and amapiano, plus a starting tip for making a beat in each style.">
+    <meta name="author" content="Mike Chishala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/beatcraft.css">
+    <link rel="stylesheet" href="styles/beatcraft-large.css">
+    <script src="scripts/beatcraft.js" defer></script>
+    <script src="scripts/genres.js" defer></script>
+    <title>BeatCraft — Genres</title>
+</head>
+<body>
+
+    <header>
+        <span class="logo">BeatCraft</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="genres.html" aria-current="page">Genres</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" type="button" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <main>
+        <h1 class="page-title">Genres</h1>
+        <p>A genre is a style of music with its own typical sounds, tempos, and rhythms. The four styles below are popular starting points for beat-makers. Tempo is shown in BPM, or beats per minute, and each range is typical rather than a strict rule.</p>
+
+        <div class="filters" role="group" aria-label="Filter genres by region">
+            <button type="button" class="filter-btn active" data-group="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-btn" data-group="hip-hop" aria-pressed="false">Hip-hop</button>
+            <button type="button" class="filter-btn" data-group="african" aria-pressed="false">African styles</button>
+        </div>
+
+        <p id="result-count" class="result-count" aria-live="polite"></p>
+
+        <div id="card-list" class="card-list"></div>
+        <noscript><p>This page needs JavaScript turned on to show the genre list.</p></noscript>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mike Chishala - BeatCraft - All Rights Reserved</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+</html>

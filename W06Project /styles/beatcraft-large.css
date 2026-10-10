@@ -1,0 +1,38 @@
+@media only screen and (min-width: 780px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        background-color: transparent;
+        transition: none;
+        flex-basis: auto;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}

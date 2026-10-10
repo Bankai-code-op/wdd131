@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send a question, request, or suggestion to BeatCraft using the contact form, and tell us about your beat-making experience.">
+    <meta name="author" content="Mike Chishala">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/beatcraft.css">
+    <link rel="stylesheet" href="styles/beatcraft-large.css">
+    <script src="scripts/beatcraft.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
+    <title>BeatCraft — Contact</title>
+</head>
+<body>
+
+    <header>
+        <span class="logo">BeatCraft</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="process.html">Process</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="menu-toggle" type="button" aria-label="Toggle navigation menu">☰</button>
+    </header>
+
+    <main>
+        <h1 class="page-title">Contact BeatCraft</h1>
+        <p>Have a question about gear, a part of the process that is unclear, or an idea for a topic the site should cover? Fill in the form below. All fields are required.</p>
+
+        <form id="contact-form" class="contact-form" action="#" method="post">
+            <div class="field">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" autocomplete="name" minlength="2" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Your email address</label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+                <label for="topic">What is your message about?</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Choose a topic</option>
+                    <option value="equipment">A question about equipment</option>
+                    <option value="process">A question about the process</option>
+                    <option value="suggestion">A suggestion for a new topic</option>
+                    <option value="other">Something else</option>
+                </select>
+            </div>
+
+            <fieldset class="field">
+                <legend>Your beat-making experience</legend>
+                <div class="choice">
+                    <input type="radio" id="exp-new" name="experience" value="Just starting out" required>
+                    <label for="exp-new">Just starting out</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="exp-some" name="experience" value="Some experience">
+                    <label for="exp-some">Some experience</label>
+                </div>
+                <div class="choice">
+                    <input type="radio" id="exp-regular" name="experience" value="Make beats regularly">
+                    <label for="exp-regular">I make beats regularly</label>
+                </div>
+            </fieldset>
+
+            <div class="field">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" rows="6" minlength="10" maxlength="500" aria-describedby="message-counter" required></textarea>
+                <p id="message-counter" class="counter" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="submit-btn">Send message</button>
+        </form>
+
+        <section id="confirmation" class="confirmation" hidden>
+            <h2 id="confirmation-title" tabindex="-1">Thank you!</h2>
+            <p>Here is a summary of what you entered:</p>
+            <dl id="confirmation-details"></dl>
+            <button type="button" id="send-another" class="reset-btn">Write another message</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Mike Chishala - BeatCraft - All Reserved</p>
+        <p id="lastModified"></p>
+        <p><a href="references.html">References</a></p>
+    </footer>
+
+</body>
+</html>
