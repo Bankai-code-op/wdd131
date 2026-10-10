@@ -196,23 +196,35 @@ nav a[aria-current="page"] {
     font-size: 0.9rem;
 }
 
-.card-list {
+.card-list,
+.gear-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.25rem;
 }
 
-.info-card {
+.info-card,
+.gear-card {
     background-color: #fff;
     border: 1px solid var(--color-dark);
     border-radius: 8px;
     padding: 1rem;
 }
 
-.info-card h2 {
+.info-card h2,
+.gear-card h2 {
     color: var(--color-primary);
     font-size: 1.2rem;
     margin-bottom: 0.25rem;
+}
+
+.gear-type {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.gear-best {
+    margin-top: 0.5rem;
 }
 
 .info-type {
